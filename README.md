@@ -16,16 +16,14 @@ INSERT: It is used to insert data into a table.
 UPDATE; It is used to update existing data within a table.
 DELETE: It is used to delete records from a database table.
 
-Create the table as given below:#
+Create the table as given below:
 
-create table manager(enumber number(6),ename char(15),salary number(5),commission number( A=»
-
+create table worker(idnum number(30),idname char(20),regno number(20),salary number(20),uino number(10),cipt number(5),job char(20),age number(5));
 ## Insert the following values into the table
 
-insert into work values(7369, 'Dharsan',2500,500,30000, '30-June-81', 'clerk',10, 'John');
-insert into work values(1102, 'leonr',1100,400,41000, '23-december-12', 'manager',13, 'linyf');
-insert into work values(3469, 'arvind',5500,100,45000, '56-febravary-29', 'assistant',86, 'chinaa');
-
+insert into worker values(1,'NAMON',234,200000,800,5678,'ASSISTANT',40);
+insert into worker values(2,'YAMI',235,600000,500,5679,'MANAGER',50);
+insert into worker values(3,'LUION',290,570000,400,5680,'SUPERVISRE',63);
 
 
 
@@ -33,131 +31,130 @@ insert into work values(3469, 'arvind',5500,100,45000, '56-febravary-29', 'assis
 bonus.
 
 ## QUERY:
-update work set salary=salary+(salary*0.10);
+update workER set salary=salary+(salary*1.70);
 ## OUTPUT:
-![output](./f.png)
+![output](./a.png)
 
 ## Q2) Delete the records from work table where the salary less than 2750.
 
 ## QUERY:
 
-delete from work where salary<2750;
+delete from worker where salary<500000;
 
 ## OUTPUT:
-![output](./a.png)
 ![output](./b.png)
 ## Q3) Display each name of the employee as “Name” and annual salary as “Annual Salary” 
 
 
 ## QUERY:
 
-select name as "Name" salary*12 as "Annual salary" from work;
+select idname as "Name" salary*12 as "Annual salary" from worker;
 
 ## OUTPUT:
-![output](./g.png)
+![output](./c.png)
 
 ## Q4) List the names of Clerks from emp table.
 
 
 ## QUERY:
 
-select ename from work where uioe="clerk’;
-
+select idname from worker where job="MANAGER";
 ## OUTPUT:
-![output](./h.png)
+![output](./d.png)
 ## Q4)List the names of employee who are not Managers.
 
 
 ## QUERY:
 
-select ename from manager where uioe <> 'work';
+select idname from worker where job <> 'MANAGER';
 ## OUTPUT:
 
-![output](./i.png)
+![output](./e.png)
 ## Q6) List the names of employees not eligible for commission.
 
 ## QUERY:
 
-select ename from manager where len=500;
+select idname from worker where regno=235;
 
 ## OUTPUT
-![output](./j.png)
+![output](./f.png)
 
 ## Q7) List employees whose name either start or end with ‘s’.
 
 ## QUERY:
 
-select name from work where ename like '%s' or ename like '%s';
-## OUTPUT:
-![output](./k.png)
+ select idname from worker where idname like '%s' or idname like '%s';
+ ## OUTPUT:
+![output](./g.png)
 
 
 ## Q8) Sort emp table in ascending order by hire-date and list ename, job, deptno,and hire-date.
 
 ## QUERY:
 
-select name,uioe as "job",deptno,hierdate from work order by hierdate asc;
-
+select idname,uino as "jobs",regno,cipt from worker order by cipt asc;
 ## OUTPUT:
-![output](./l.png)
+![output](./h.png)
 
-## Q9) List the Details of Employees who have joined before 30 Sept 81.
-
+## Q9) List the Details of Employees who have joined before regno.
 ## QUERY:
 
-select * from work where uioe hierdate <to_date('1981-09-30','YYYY-MM-DD");
-
+select * from worker where uino cipt <regno(235,290);
 ## OUTPUT
-![output](./m.png)
+![output](./j.png)
+![output](./k.png)
 
 ## Q10) List ename, deptno and sal after sorting emp table in ascending order bydeptno and then descending order by sal.
 
 ## QUERY:
 
-select name,deptno,salary from work order by deptno asc,salary desc;
+select idname,regno,salary from worker order by regno asc,salary desc;
 
 ## OUTPUT:
-![output](./n.png)
+![output](./i.png)
 
 
 ## Q11) List the names of employees not belonging to dept no 30,40 & 10
 
 ## QUERY:
 
-select ename from work where deptno not in (30,40,10);
+ select idname from worker where regno not in (234,235);
 
 ## OUTPUT:
-![output](./h.png)
+![output](./l.png)
 
 ## Q12) Find number of rows in the table EMP
 
 
 ## QUERY:
 
-select count(*) from work;
-
+select count(*) from worker;
 ## OUTPUT:
-![output](./p.png)
+![output](./m.png)
 
 
 ## Q13) Find maximum, minimum and average salary in EMP table.
 ## QUERY:
 
 
-select max(salary) from work;
+select max(salary) from worker;
 
 ## OUTPUT:
 
-![output](./q.png)
+![output](./n.png)
+
+select min(salary) from worker;
+
+## OUTPUT:
+![output](./p.png)
 
 ## Q14) List the jobs and number of employees in each job. The result should be in the descending order of the number of employees.
 ## QUERY:
 
-SELECT designation AS job, COUNT(*) AS num_employees FROM manager GROUP BY designation
-ORDER BY num_employees DESC;
+ SELECT uino AS job, COUNT(*) AS num_employees FROM worker GROUP BY uino ORDER BY num_employees DESC;
 
 ## OUTPUT:
-![output](./z.png)
+![output](./q.png)
 
 ## RESULT :
 
