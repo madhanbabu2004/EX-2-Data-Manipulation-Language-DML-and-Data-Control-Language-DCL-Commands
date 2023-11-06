@@ -1,6 +1,7 @@
 # EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands
-## AlM:
 
+## DATE
+## AlM:
 To create a manager database and execute DML queries using SQL.
 
 ## DML(Data Manipulation Language)
